@@ -1,3 +1,76 @@
+/* CSS RESET - do not remove */
+/* Reset default browser styles and provide a consistent starting point */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+
+@media (min-width: 900px) {
+  html {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* STYLES */
+/* Write your CSS below */
+
+/* CSS RESET - do not remove */
+/* Reset default browser styles and provide a consistent starting point */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+
+/* STYLES */
+/* Write your CSS below */
+
 /*
 Colors:
 
@@ -6,3 +79,216 @@ Green: #00B172
 White: #FFF
 
 */
+:root {
+  --clr-black: #1a1a1a;
+  --clr-green: #00b172;
+  --clr-white: #fff;
+}
+
+header {
+  /*Instead of using position: fixed, I used sticky and z-index so the rest
+  of the elements in the web show under the bar (with no margin set)*/
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  width: 100%;
+  padding: 1em 1em;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-white);
+}
+
+.logobar img {
+  height: 1.7rem;
+}
+
+.navbar {
+  align-content: flex-end;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.navbar li {
+  list-style: none;
+  display: inline;
+}
+
+.navbar a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--clr-black);
+  font-size: 0.9em;
+}
+
+.background-header {
+  margin: 0 auto;
+  color: var(--clr-white);
+  background-image: url("../images/landing.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9em 0px 14em;
+}
+
+.background-header > * {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.background-header h1 {
+  font-size: clamp(2.8125rem, 2.5272rem + 1.6304vw, 3.75rem);
+  padding: 0.5em;
+}
+
+.background-header h4 {
+  font-size: clamp(0.625rem, 0.4231rem + 1.1538vw, 1rem);
+  font-weight: 100;
+  padding: 0.1em;
+}
+
+.whatson {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.whatson h2 {
+  font-weight: 600;
+  border-bottom: var(--clr-green) solid 3px;
+  padding: 3px 0;
+}
+
+.whatson-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 1em;
+}
+
+.little-container {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+  padding: 0.8em;
+}
+
+.little-container img {
+  display: inline-block;
+  width: 100%;
+  max-width: 7em;
+}
+
+.little-container h3 {
+  font-weight: bold;
+  color: var(--clr-green);
+  padding: 1em 0;
+  font-size: clamp(0.3em, 4vw, 1.3em);
+}
+
+.little-container p {
+  margin: 0 1em;
+  font-size: clamp(0.3em, 1.7vw, 1em);
+}
+
+.categories {
+  display: flex;
+  background-color: var(--clr-green);
+  margin: 0 1.5em 1.5em;
+  padding: 4vh 4vh;
+}
+
+.categories-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  color: var(--clr-white);
+}
+
+.categories-middle-col {
+  display: flex;
+  background-image: url("../images/spotify-icon-white.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 8vh;
+  width: 50%;
+}
+
+.categories-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.categories-header {
+  width: 180%;
+}
+
+.categories-header h2 {
+  display: inline;
+  font-weight: 600;
+  border-bottom: var(--clr-white) solid 3px;
+  padding: 3px 0 0;
+  line-height: 1.5em;
+}
+
+.categories-image img {
+  width: 100%;
+}
+
+.categories-container-little {
+  margin: 2em 0;
+}
+
+.categories-container-little h3 {
+  font-weight: 600;
+}
+
+.categories-container-little p {
+  padding: 1.5em 0 0 0;
+  font-weight: lighter;
+  font-size: 0.9em;
+}
+
+@media (max-width: 550px) {
+  .logobar img {
+    height: 1.5em;
+  }
+  .navbar {
+    font-size: 0.8rem;
+  }
+  .categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vh 2vh;
+  }
+  .categories-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .categories-header {
+    width: 100%;
+  }
+  .categories-middle-col {
+    width: 10svh;
+    height: 10svh;
+    margin: 0 auto;
+  }
+  .categories-image {
+    margin: 2vh auto 0;
+  }
+}
